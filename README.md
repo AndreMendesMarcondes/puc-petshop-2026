@@ -1,33 +1,39 @@
-# PucPetShop
+# PucPetShop - Fase 2
 
-Este é um site HTML simples para o projeto PucPetShop.
+Sistema web de petshop com Bootstrap, JavaScript e formulário de cadastro/agendamento.
 
-## Como executar
+## Objetivo e metas
 
-1. Baixe ou clone este repositório:
-    ```bash
-    git clone https://github.com/seu-usuario/pucpetshop.git
-    ```
-2. Navegue até a pasta do projeto:
-    ```bash
-    cd pucpetshop
-    ```
-3. Abra o arquivo `index.html` no seu navegador preferido.
+- Tornar o site mais atrativo com layout responsivo, componentes Bootstrap e carrossel.
+- Incluir dinamismo com JavaScript (saudação por horário, máscara de campos, cálculo de valor e confirmação de agendamento).
+- Cadastrar cliente e pet em um formulário completo com validação de campos obrigatórios.
+- Permitir escolha de serviço (banho/tosa), método (tele-busca/entrega no local), data e horário.
+- Aplicar acessibilidade básica com `alt` descritivo nas imagens, navegação semântica e foco visível.
 
-## Estrutura do Projeto
+## Ajustes realizados na fase 2
 
-- `index.html` — Página principal do site
-- `css/` — Arquivos de estilos
-- `js/` — Scripts JavaScript (se houver)
-- `imagens/` — Imagens utilizadas no site
+- Aplicação de Bootstrap nas páginas `index.html`, `servicos.html` e `contato.html`.
+- Criação de estilos próprios em `css/styles.css`.
+- Inclusão de carrossel na página inicial.
+- Criação do formulário completo de cadastro do cliente e pet com agendamento.
+- Implementação das funções JavaScript em `js/main.js`.
 
-## Requisitos
+## Link do código-fonte (GitHub)
 
-- Navegador web atualizado (Chrome, Firefox, Edge, etc.)
+- Repositório: `https://github.com/seu-usuario/puc-petshop-2026`
 
-## Observações
+## Link do sistema publicado (GitHub Pages)
 
-Não é necessário instalar dependências ou rodar servidores. Basta abrir o arquivo HTML.
+- Site: `https://seu-usuario.github.io/puc-petshop-2026/`
 
----
-Feito com 💙 para a disciplina de Desenvolvimento Web.
+## Como executar localmente
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/puc-petshop-2026.git
+   ```
+2. Entre na pasta:
+   ```bash
+   cd puc-petshop-2026
+   ```
+3. Abra o arquivo `index.html` no navegador.

@@ -2,50 +2,170 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Bichinhos Felizes - Contato</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bichinhos Felizes - Cadastro e Agendamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-
-    <header>
-        <h1>Bichinhos Felizes</h1>
-        <p>Tudo para o seu melhor amigo!</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Produtos</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">**Contato**</a></li>
-            </ul>
-        </nav>
+<body id="topo">
+    <header class="bg-primary text-white py-4 mb-4">
+        <div class="container">
+            <h1 class="mb-1">Bichinhos Felizes</h1>
+            <p class="mb-3">Tudo para o seu melhor amigo!</p>
+            <nav aria-label="Menu principal">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contato.html" aria-current="page">Cadastro e Agendamento</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        
-        <section id="contato-info">
-            <h2>📞 Fale Conosco</h2>
-            
-            <p>Se tiver alguma dúvida, entre em contato!</p>
-            
-            <div>
-                <h3>Informações de Contato</h3>
-                <p>Telefone: **(99) 99999-9999**</p>
-                <p>E-mail: **andremendesmarcondes@petshop.com.br**</p>
-                <p>Endereço: Rua dos Bichos, 123 - Cidade/UF</p>
-            </div>
-            
+    <main class="container">
+        <section class="mb-4">
+            <h2>Cadastro do Cliente e do Pet</h2>
+            <p>Preencha os dados para agendar banho ou tosa com tele-busca ou entrega no local.</p>
         </section>
 
+        <section class="card shadow-sm mb-5">
+            <div class="card-body">
+                <form id="form-agendamento" novalidate>
+                    <fieldset class="mb-4">
+                        <legend class="h5">Dados do Cliente</legend>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nomeCliente" class="form-label">Nome completo *</label>
+                                <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Digite seu nome completo" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cpfCliente" class="form-label">CPF *</label>
+                                <input type="text" class="form-control" id="cpfCliente" name="cpfCliente" maxlength="14" placeholder="000.000.000-00" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telefoneCliente" class="form-label">Telefone *</label>
+                                <input type="tel" class="form-control" id="telefoneCliente" name="telefoneCliente" placeholder="(99) 99999-9999" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="emailCliente" class="form-label">E-mail *</label>
+                                <input type="email" class="form-control" id="emailCliente" name="emailCliente" placeholder="nome@email.com" required>
+                            </div>
+                            <div class="col-md-8">
+                                <label for="enderecoCliente" class="form-label">Endereço *</label>
+                                <input type="text" class="form-control" id="enderecoCliente" name="enderecoCliente" placeholder="Rua, número, bairro, cidade" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label d-block">Sexo *</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexoCliente" id="sexoF" value="Feminino" required>
+                                    <label class="form-check-label" for="sexoF">Feminino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexoCliente" id="sexoM" value="Masculino" required>
+                                    <label class="form-check-label" for="sexoM">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexoCliente" id="sexoOutro" value="Outro" required>
+                                    <label class="form-check-label" for="sexoOutro">Outro</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="mb-4">
+                        <legend class="h5">Dados do Pet</legend>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="nomePet" class="form-label">Nome do pet *</label>
+                                <input type="text" class="form-control" id="nomePet" name="nomePet" placeholder="Ex: Thor" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="racaPet" class="form-label">Raça *</label>
+                                <input type="text" class="form-control" id="racaPet" name="racaPet" placeholder="Ex: Shih Tzu" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="idadePet" class="form-label">Idade (anos) *</label>
+                                <input type="number" class="form-control" id="idadePet" name="idadePet" min="0" max="30" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="mb-4">
+                        <legend class="h5">Serviço e Agendamento</legend>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="servico" class="form-label">Serviço *</label>
+                                <select id="servico" name="servico" class="form-select" required>
+                                    <option value="">Selecione um serviço</option>
+                                    <option value="Banho">Banho - R$ 60,00</option>
+                                    <option value="Tosa">Tosa - R$ 75,00</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="metodoAgendamento" class="form-label">Método de atendimento *</label>
+                                <select id="metodoAgendamento" name="metodoAgendamento" class="form-select" required>
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="Tele-busca">Tele-busca (taxa de R$ 15,00)</option>
+                                    <option value="Entrega no local">Entrega do pet no local</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="dataAgendamento" class="form-label">Data *</label>
+                                <input type="date" class="form-control" id="dataAgendamento" name="dataAgendamento" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="horaAgendamento" class="form-label">Horário *</label>
+                                <input type="time" class="form-control" id="horaAgendamento" name="horaAgendamento" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="estimativa" class="form-label">Valor estimado</label>
+                                <input type="text" class="form-control" id="estimativa" value="R$ 0,00" readonly aria-live="polite">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="mb-4">
+                        <legend class="h5">Preferências</legend>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="lembrete" name="lembrete">
+                            <label class="form-check-label" for="lembrete">
+                                Quero receber lembrete por WhatsApp antes do atendimento.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aceiteTermos" name="aceiteTermos" required>
+                            <label class="form-check-label" for="aceiteTermos">
+                                Declaro que as informações fornecidas são verdadeiras. *
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Confirmar agendamento</button>
+                        <button type="reset" class="btn btn-outline-secondary">Limpar campos</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="resultadoAgendamento" class="alert alert-success d-none" role="alert" aria-live="assertive"></section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Bichinhos Felizes. Todos os direitos reservados.</p>
-        <p>Autor do Site: André Mendes Marcondes</p>
-        <p>Contato: (99) 99999-9999 | andremendesmarcondes@petshop.com.br</p>
-        <nav>
-             <a href="index.html">Produtos</a> | 
-             <a href="servicos.html">Serviços</a> |
-             <a href="#topo">Topo da Página</a>
-        </nav>
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Bichinhos Felizes. Todos os direitos reservados.</p>
+            <p class="mb-1">Autor do Site: André Mendes Marcondes</p>
+            <p class="mb-2">Contato: (99) 99999-9999 | andremendesmarcondes@petshop.com.br</p>
+            <nav aria-label="Navegação do rodapé">
+                <a class="link-light" href="index.html">Produtos</a> |
+                <a class="link-light" href="servicos.html">Serviços</a> |
+                <a class="link-light" href="contato.html">Cadastro e Agendamento</a> |
+                <a class="link-light" href="#topo">Topo da Página</a>
+            </nav>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
